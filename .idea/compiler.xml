@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="inside-chapter1" />
+        <module name="inside-chapter1-p1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />
@@ -14,6 +15,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="inside-chapter1" options="-parameters" />
+      <module name="inside-chapter1-p1" options="-parameters" />
     </option>
   </component>
 </project>
