@@ -1,0 +1,28 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+target/
+
+# eclipse
+.settings/
+.classpath
+.project
+logs/
+temp/
+
+#Mac
+.DS_Store
+
+### IntelliJ IDEA ###
+.idea
+.idea/*
+*.iws
+*.ipr
+*.iml
+
+*.log
+tmp/
+
