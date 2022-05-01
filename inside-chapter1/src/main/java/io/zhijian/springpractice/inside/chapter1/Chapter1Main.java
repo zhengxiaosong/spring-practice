@@ -9,8 +9,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Chapter1Main
+ * 使用 @EnableAutoConfiguration 启用SpringBoot自动装配
+ *
+ * @author song.z
+ */
 @Controller
-@EnableAutoConfiguration    // 启用SpringBoot 自动装配
+@EnableAutoConfiguration
 public class Chapter1Main {
     public static void main(String[] args){
         SpringApplication.run(Chapter1Main.class, args);
@@ -19,7 +25,7 @@ public class Chapter1Main {
     @RequestMapping("/test")
     @ResponseBody
     public Map<String, String> test() {
-        Map<String, String> map = new HashMap<>();
+        Map<String, String> map = new HashMap<>(16);
         map.put("name", "xiaosong");
         return map;
     }
