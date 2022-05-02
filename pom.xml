@@ -4,12 +4,39 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.zhijian.springpractice.inside</groupId>
+    <!-- 项目信息 -->
+    <groupId>io.zhijian.springpractice</groupId>
     <artifactId>spring-practice</artifactId>
     <name>spring-practice</name>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
 
+    <!-- 子模块列表 -->
     <modules>
         <module>inside-chapter1</module>
         <module>inside-chapter1-p1</module>
     </modules>
+
+    <!-- 共用版本属性定义 -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <spring.boot.version>2.0.0.RELEASE</spring.boot.version>
+    </properties>
+
+    <!-- 子模块版本统一管理 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- spring boot 版本统一依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
